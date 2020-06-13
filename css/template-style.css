@@ -531,9 +531,18 @@ footer p, footer a:visited, footer a, footer a:hover {
 	float: left;
 }
 
+.iframe_align{
+	margin-left:25%;
+}
+
 .logo img {
 	height: 1.7em;
 	margin-right: 4px;
+}
+
+.container {
+	width:1005px;
+	margin: 0px auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -547,6 +556,15 @@ footer p, footer a:visited, footer a, footer a:hover {
 		margin-left: 2em;
 		height:2em;
 		padding-bottom:20px;
+	}
+
+	.container {
+		width: 100%;
+		margin: 0px auto;
+	}
+
+	.iframe_align {
+		margin-left: 0px;
 	}
 
 }

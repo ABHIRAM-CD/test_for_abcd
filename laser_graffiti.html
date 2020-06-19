@@ -17,7 +17,12 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>
 </head>
-<body class="size-1140">
+<body class="size-1140" onload="prefunction()">
+
+    <!--PRELOADER-->
+
+    <div id="loader"></div>
+
     <!-- TOP NAV WITH LOGO -->
     <header>
         <div id="topbar" class="hide-s hide-m">
@@ -41,7 +46,7 @@
 
                     <ul class="right">
                         <li class="active-item"><a href="index.html">Home</a></li>
-                        <li><a href="#our-work" >Documents</a></li>
+                        <li><a href="#our-work">Documents</a></li>
                         <li><a href="pdf/H2 atm.pdf" download="h2" target="_blank">Download PDF</a></li>
                         <li><a href="program/laser_graffiti.m" download="laser_graffiti" target="_blank">Download Code</a></li>
                     </ul>
@@ -97,15 +102,21 @@
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript">
-               jQuery(document).ready(function ($) {
-                   // Custom Navigation Events
-                   $(".next-arrow").click(function () {
-                       theme_slider.trigger('next.owl');
-                   })
-                   $(".prev-arrow").click(function () {
-                       theme_slider.trigger('prev.owl');
-                   })
-               });
+        jQuery(document).ready(function ($) {
+            // Custom Navigation Events
+            $(".next-arrow").click(function () {
+                theme_slider.trigger('next.owl');
+            })
+            $(".prev-arrow").click(function () {
+                theme_slider.trigger('prev.owl');
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        var preloader = document.getElementById('loader');
+        function prefunction() {
+            preloader.style.display = 'none';
+        }
     </script>
 </body>
 </html>

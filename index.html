@@ -17,7 +17,12 @@
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
       <script type="text/javascript" src="js/template-scripts.js"></script> 
    </head>
-   <body class="size-1140">
+   <body class="size-1140" onload="prefunction()">
+
+       <!--PRELOADER-->
+
+       <div id="loader"></div>
+
        <!-- TOP NAV WITH LOGO -->
        <header>
            <div id="topbar" class="hide-s hide-m">
@@ -323,6 +328,12 @@
                        theme_slider.trigger('prev.owl');
                    })
                });
+           </script>
+           <script type="text/javascript">
+               var preloader = document.getElementById('loader');
+               function prefunction(){
+                   preloader.style.display = 'none';
+               }
            </script>
    </body>
 </html>
